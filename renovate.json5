@@ -14,7 +14,20 @@
         "*"
       ],
       "enabled": false,
+    },
+    {
+      "enabled": true,
+      "groupName": "DBRE packages",
+      "matchManagers": [
+        "dockerfile"
+      ],
+      "paths": [
+        "folder-to-include/**",
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
     }
   ]
-
 }
