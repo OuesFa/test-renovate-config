@@ -7,5 +7,14 @@
   ],
   "ignorePresets": [
     ":prHourlyLimit2"
+  ],
+  "packageRules": [
+    {
+      "packagePatterns": [
+        "*"
+      ],
+      "enabled": false,
+    }
   ]
+
 }
