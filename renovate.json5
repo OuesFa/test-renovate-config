@@ -9,7 +9,7 @@
     // disable all packages
     {
       "packagePatterns": [
-        "*"
+        "**"
       ],
       "enabled": false,
     },
