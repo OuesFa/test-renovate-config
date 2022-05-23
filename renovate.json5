@@ -2,19 +2,18 @@
   "extends": [
     "config:base"
   ],
-  "enabledManagers": [
-    "dockerfile"
-  ],
   "ignorePresets": [
     ":prHourlyLimit2"
   ],
   "packageRules": [
+    // disable all packages
     {
       "packagePatterns": [
         "*"
       ],
       "enabled": false,
     },
+    // only enable packages within folder-to-include that are dockerfiles and only minor and patch updates
     {
       "enabled": true,
       "groupName": "DBRE packages",
@@ -23,6 +22,21 @@
       ],
       "paths": [
         "folder-to-include/**",
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
+    },
+    // only enable packages within folder-to-include/mariadb that are dockerfiles and only patch
+    {
+      "enabled": true,
+      "groupName": "mariadb packages",
+      "matchManagers": [
+        "dockerfile"
+      ],
+      "paths": [
+        "folder-to-include/mariadb/**",
       ],
       "matchUpdateTypes": [
         "minor",
