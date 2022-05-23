@@ -50,7 +50,6 @@
         "folder-to-include/mariadb/**",
       ],
       "matchUpdateTypes": [
-        "minor",
         "patch"
       ]
     }
