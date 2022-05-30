@@ -43,6 +43,9 @@
       // only enable packages within folder-to-include/mariadb that are dockerfiles and only patch
       {
         "enabled": false,
+        matchPaths: [
+          "folder-to-include/**"
+        ],
         "updateTypes": [
           "major",
           "minor"
