@@ -8,10 +8,13 @@
   "packageRules": [
     // disable all packages
     {
-      "packagePatterns": [
-        "*"
+//      "packagePatterns": [
+//        "*"
+//      ],
+      matchPaths: [
+        "folder-to-exclude/**"
       ],
-      "enabled": false,
+      "enabled": false
     },
     // only enable packages within folder-to-include that are dockerfiles and only minor and patch updates
     {
