@@ -42,6 +42,7 @@
       "enabled": false,
       "updateTypes": [
         "major",
+        "minor"
       ]
     }
   ]
