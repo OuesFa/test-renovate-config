@@ -29,7 +29,9 @@
           "folder-to-include/mariadb/**"
         ],
         matchUpdateTypes: [
-          "minor"
+          "minor",
+          "major",
+          "patch"
         ]
         // I enabled postUpgradeTasks on my self hosted renovate
         //"allowPostUpgradeCommandTemplating": true,
