@@ -8,7 +8,7 @@
     ":prHourlyLimit2"
   ],
   enabledManagers: [
-    "dockerfiles"
+    "dockerfile"
   ]
   //  includePaths: [
   //    "folder-to-include/**"
