@@ -20,7 +20,7 @@
     // only enable packages within folder-to-include that are dockerfiles and only minor and patch updates
     {
       "enabled": true,
-      "groupName": "ES packages",
+      "groupName": "DBRE packages",
       "paths": [
         "folder-to-include/elastic/**",
         "folder-to-include/mariadb/**"
@@ -41,7 +41,8 @@
     {
       "enabled": false,
       "updateTypes": [
-        "major"
+        "major",
+        "minor"
       ]
     }
   ]
