@@ -1,6 +1,7 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+    ":separateMinorPatch"
   ],
   "ignorePresets": [
     ":prHourlyLimit2"
@@ -24,23 +25,23 @@
         "dockerfile"
       ],
       "matchPaths": [
-        "folder-to-include/**"
+        "folder-to-include/elastic/**"
       ],
       "matchUpdateTypes": [
         "minor",
         "patch"
       ],
       // I enabled postUpgradeTasks on my self hosted renovate
-      "allowPostUpgradeCommandTemplating": true,
-      "postUpgradeTasks": {
-        "commands": [
-          "find . -name Dockerfile -type f -exec sed -i 's/LABEL version=\"{{{currentVersion}}}\"/LABEL version=\"{{{newVersion}}}\"/g' {} \\;"
-        ],
-        "fileFilters": [
-          "dbre/**/Dockerfile"
-        ],
-        "executionMode": "update"
-      }
+      //"allowPostUpgradeCommandTemplating": true,
+//      "postUpgradeTasks": {
+//        "commands": [
+//          "find . -name Dockerfile -type f -exec sed -i 's/LABEL version=\"{{{currentVersion}}}\"/LABEL version=\"{{{newVersion}}}\"/g' {} \\;"
+//        ],
+//        "fileFilters": [
+//          "dbre/**/Dockerfile"
+//        ],
+//        "executionMode": "update"
+//      }
     },
     // only enable packages within folder-to-include/mariadb that are dockerfiles and only patch
     {
