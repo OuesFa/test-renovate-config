@@ -1,7 +1,7 @@
 {
   "extends": [
-    "config:base",
-    ":separateMinorPatch"
+    "config:base"
+    //":separateMinorPatch"
   ],
   "ignorePresets": [
     ":prHourlyLimit2"
