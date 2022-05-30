@@ -23,9 +23,6 @@
       "matchPaths": [
         "folder-to-include/**"
       ],
-      "paths": [
-        "folder-to-include/**"
-      ],
       "matchUpdateTypes": [
         "minor",
         "patch"
@@ -51,9 +48,6 @@
       ],
       "matchPaths": [
         "folder-to-include/mariadb/**"
-      ],
-      "paths": [
-        "folder-to-include/mariadb/**",
       ],
       "matchUpdateTypes": [
         "patch"
