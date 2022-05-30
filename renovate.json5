@@ -46,12 +46,12 @@
   //      }
       },
       // only enable packages within folder-to-include/mariadb that are dockerfiles and only patch
-//      {
-//        "enabled": false,
-//        "updateTypes": [
-//          "major",
-//          "minor"
-//        ]
-//      }
+      {
+        "enabled": false,
+        "updateTypes": [
+          "major",
+          "minor"
+        ]
+      }
     ]
 }
