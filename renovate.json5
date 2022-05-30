@@ -20,8 +20,11 @@
       "matchManagers": [
         "dockerfile"
       ],
+      "matchPaths": [
+        "folder-to-include/**"
+      ],
       "paths": [
-        "folder-to-include/**",
+        "folder-to-include/**"
       ],
       "matchUpdateTypes": [
         "minor",
@@ -46,17 +49,14 @@
       "matchManagers": [
         "dockerfile"
       ],
+      "matchPaths": [
+        "folder-to-include/mariadb/**"
+      ],
       "paths": [
         "folder-to-include/mariadb/**",
       ],
       "matchUpdateTypes": [
-        "patch",
-        "bump",
-        "digest",
-        "lockFileMaintenance",
-        "pin",
-        "pinDigest",
-        "rollback"
+        "patch"
       ]
     }
   ]
