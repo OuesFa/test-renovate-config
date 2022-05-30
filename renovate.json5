@@ -1,49 +1,52 @@
 {
   "extends": [
-    "config:base",
+    "config:base"
     //":separateMinorPatch"
-    ":semanticCommitTypeAll(chore)"
+    //":semanticCommitTypeAll(chore)"
   ],
   "ignorePresets": [
     ":prHourlyLimit2"
   ],
-//  includePaths: [
-//    "folder-to-include/**"
-//  ],
-  "packageRules": [
-    // disable all packages
-    {
-      "packagePatterns": [
-        "*"
-      ],
-      "enabled": false
-    },
-    // only enable packages within folder-to-include that are dockerfiles and only minor and patch updates
-    {
-      "enabled": true,
-      "groupName": "DBRE packages",
-      "paths": [
-        "folder-to-include/elastic/**",
-        "folder-to-include/mariadb/**"
-      ],
-      // I enabled postUpgradeTasks on my self hosted renovate
-      //"allowPostUpgradeCommandTemplating": true,
-//      "postUpgradeTasks": {
-//        "commands": [
-//          "find . -name Dockerfile -type f -exec sed -i 's/LABEL version=\"{{{currentVersion}}}\"/LABEL version=\"{{{newVersion}}}\"/g' {} \\;"
-//        ],
-//        "fileFilters": [
-//          "dbre/**/Dockerfile"
-//        ],
-//        "executionMode": "update"
-//      }
-    },
-    // only enable packages within folder-to-include/mariadb that are dockerfiles and only patch
-    {
-      "enabled": false,
-      "updateTypes": [
-        "major"
-      ]
-    }
+  enabledManagers: [
+    "dockerfiles"
   ]
+  //  includePaths: [
+  //    "folder-to-include/**"
+  //  ],
+  //  "packageRules": [
+  //    // disable all packages
+  //    {
+  //      "packagePatterns": [
+  //        "*"
+  //      ],
+  //      "enabled": false
+  //    },
+  //    // only enable packages within folder-to-include that are dockerfiles and only minor and patch updates
+  //    {
+  //      "enabled": true,
+  //      "groupName": "DBRE packages",
+  //      "paths": [
+  //        "folder-to-include/elastic/**",
+  //        "folder-to-include/mariadb/**"
+  //      ],
+  //      // I enabled postUpgradeTasks on my self hosted renovate
+  //      //"allowPostUpgradeCommandTemplating": true,
+  ////      "postUpgradeTasks": {
+  ////        "commands": [
+  ////          "find . -name Dockerfile -type f -exec sed -i 's/LABEL version=\"{{{currentVersion}}}\"/LABEL version=\"{{{newVersion}}}\"/g' {} \\;"
+  ////        ],
+  ////        "fileFilters": [
+  ////          "dbre/**/Dockerfile"
+  ////        ],
+  ////        "executionMode": "update"
+  ////      }
+  //    },
+  //    // only enable packages within folder-to-include/mariadb that are dockerfiles and only patch
+  //    {
+  //      "enabled": false,
+  //      "updateTypes": [
+  //        "major"
+  //      ]
+  //    }
+  //  ]
 }
