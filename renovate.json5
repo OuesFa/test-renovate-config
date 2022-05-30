@@ -6,59 +6,59 @@
   "ignorePresets": [
     ":prHourlyLimit2"
   ],
-  includePaths: [
-    "folder-to-include/**"
-  ],
-//  "packageRules": [
-//    // disable all packages
-////    {
-////      "packagePatterns": [
-////        "*"
-////      ],
-////      matchPaths: [
-////        "folder-to-exclude/**"
-////      ],
-////      "enabled": false
-////    },
-//    // only enable packages within folder-to-include that are dockerfiles and only minor and patch updates
+//  includePaths: [
+//    "folder-to-include/**"
+//  ],
+  "packageRules": [
+    // disable all packages
 //    {
-//      "enabled": true,
-//      "groupName": "ES packages",
-//      "matchManagers": [
-//        "dockerfile"
+//      "packagePatterns": [
+//        "*"
 //      ],
-//      "matchPaths": [
-//        "folder-to-include/elastic/**"
+//      matchPaths: [
+//        "folder-to-exclude/**"
 //      ],
-//      "matchUpdateTypes": [
-//        "minor",
-//        "patch"
-//      ]
-//      // I enabled postUpgradeTasks on my self hosted renovate
-//      //"allowPostUpgradeCommandTemplating": true,
-////      "postUpgradeTasks": {
-////        "commands": [
-////          "find . -name Dockerfile -type f -exec sed -i 's/LABEL version=\"{{{currentVersion}}}\"/LABEL version=\"{{{newVersion}}}\"/g' {} \\;"
-////        ],
-////        "fileFilters": [
-////          "dbre/**/Dockerfile"
-////        ],
-////        "executionMode": "update"
-////      }
+//      "enabled": false
 //    },
-//    // only enable packages within folder-to-include/mariadb that are dockerfiles and only patch
-//    {
-//      "enabled": true,
-//      "groupName": "mariadb packages",
-//      "matchManagers": [
-//        "dockerfile"
-//      ],
-//      "matchPaths": [
-//        "folder-to-include/mariadb/**"
-//      ],
-//      "matchUpdateTypes": [
-//        "patch"
-//      ]
-//    }
-//  ]
+    // only enable packages within folder-to-include that are dockerfiles and only minor and patch updates
+    {
+      "enabled": true,
+      "groupName": "ES packages",
+      "matchManagers": [
+        "dockerfile"
+      ],
+      "matchPaths": [
+        "folder-to-include/elastic/**"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
+      // I enabled postUpgradeTasks on my self hosted renovate
+      //"allowPostUpgradeCommandTemplating": true,
+//      "postUpgradeTasks": {
+//        "commands": [
+//          "find . -name Dockerfile -type f -exec sed -i 's/LABEL version=\"{{{currentVersion}}}\"/LABEL version=\"{{{newVersion}}}\"/g' {} \\;"
+//        ],
+//        "fileFilters": [
+//          "dbre/**/Dockerfile"
+//        ],
+//        "executionMode": "update"
+//      }
+    },
+    // only enable packages within folder-to-include/mariadb that are dockerfiles and only patch
+    {
+      "enabled": true,
+      "groupName": "mariadb packages",
+      "matchManagers": [
+        "dockerfile"
+      ],
+      "matchPaths": [
+        "folder-to-include/mariadb/**"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ]
+    }
+  ]
 }
