@@ -1,8 +1,7 @@
 {
   "extends": [
     "config:base",
-    //":separateMinorPatch"
-    ":semanticCommitTypeAll(chore)"
+    ":separatePatchReleases"
   ],
   "ignorePresets": [
     ":prHourlyLimit2"
