@@ -28,11 +28,6 @@
           "folder-to-include/elastic/**",
           "folder-to-include/mariadb/**"
         ],
-        matchUpdateTypes: [
-          "minor",
-          "major",
-          "patch"
-        ]
         // I enabled postUpgradeTasks on my self hosted renovate
         //"allowPostUpgradeCommandTemplating": true,
   //      "postUpgradeTasks": {
